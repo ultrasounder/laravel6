@@ -18,7 +18,7 @@
 <body>
     <h>Hello World!</h>
 
-    <p>{{$post}}</p>
+    <p>{{$post->body}}</p>
 
     <script src="" async defer></script>
 </body>

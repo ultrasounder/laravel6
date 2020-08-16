@@ -11,7 +11,12 @@ class PostsController extends Controller
 
 
         $post = \DB::table('posts')->where('slug', $slug)->first();
-        dd($post);
+
+
+        if (!$post) {
+            abort(404, 'Post not found');
+        }
+
         // $posts = [
         //     'my-first-post' => 'Hello, this is my first blog post',
         //     'my-second-post' => 'I am getting a hang of this blog thing'
